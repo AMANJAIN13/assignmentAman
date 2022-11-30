@@ -1,0 +1,4 @@
+steps:
+PWD: AmanJainAssignment/Challenge3/
+run :
+python .\Aman-Challenge-3.py  .\sample_data.json time.disclaimer
