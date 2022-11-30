@@ -1,0 +1,6 @@
+
+Steps :
+install python version 3.11.0
+PWD: AmanJainAssignment/Challenge2/
+run :
+python .\aman-Challenge-2.py .\response.json 
