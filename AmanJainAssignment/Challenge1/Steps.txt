@@ -1,0 +1,49 @@
+Three-tier architecture is a well-established software application architecture that organizes applications
+into three logical and physical computing tiers: the presentation tier, or user interface; 
+the application tier, where data is processed; and the data tier, where the data associated with the application is stored and managed.
+
+The chief benefit of three-tier architecture is that because each tier runs on its own infrastructure, 
+each tier can be developed simultaneously by a separate development team, and can be updated or scaled as needed without impacting the other tiers.
+
+Other benefits (compared to single- or two-tier architecture) include:
+
+Faster development: Because each tier can be developed simultaneously by different teams, an 
+organization can bring the application to market faster, and programmers can use the latest and best languages and tools for each tier.
+Improved scalability: Any tier can be scaled independently of the others as needed.
+Improved reliability: An outage in one tier is less likely to impact the availability or performance of the other tiers.
+Improved security: Because the presentation tier and data tier can't communicate directly, a well-designed application tier 
+can function as a sort of internal firewall, preventing SQL injections and other malicious exploits.
+
+Resources :
+One Resource Group
+ one virtual network 
+  web_subnet: accepts traffic from internet   with associated security group web_nsg_subnet
+  app_subnet: accepts traffic from web_subnet with associated security group app_nsg_subnet
+  db_subnet : accepts traffic from app_subnet with associated security group db_nsg_subnet
+
+It consist of multiple modules for abstractions . module consist of files main.tf and vars.tf , output.tf as needed .
+you will need to provide variables in terraform.tfvars.
+
+Steps:
+Install terraform :
+1.download :https://developer.hashicorp.com/terraform/downloads
+2.unzip the file
+3.place terraform.exe in C:\Windows to be able to execute from anywhere .
+4.install Azure ClI on your machine .
+
+steps to run terraform :
+1.login to azure portal through service principle or az login 
+2.go to directory where Terraform scripts are placed 
+3.terraform init:
+  used to initialize a working directory containing Terraform configuration files
+4.terraform plan:
+  used to create an execution plan
+5. terraform apply:
+  used to apply the changes required to reach the desired state of the configuration
+  (optional) before apply terraform validate can be used to validates the configuration files in a directory, 
+  referring only to the configuration and not accessing any remote services such as remote state, provider APIs, etc.
+
+
+
+
+
