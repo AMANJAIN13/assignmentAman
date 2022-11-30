@@ -1,6 +1,9 @@
 
 Steps :
-install python version 3.11.0
+1.you would need azure virtual machine
+2.install python version 3.11.0
 PWD: AmanJainAssignment/Challenge2/
 run :
 python .\aman-Challenge-2.py .\response.json 
+
+on execution of code metadata will be saved to response.json(initially empty json file)
