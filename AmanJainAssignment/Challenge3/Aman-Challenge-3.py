@@ -1,4 +1,3 @@
-#import requests
 import json
 import sys
 from jsonpath_ng import jsonpath, parse
@@ -18,8 +17,3 @@ jsonpath_expression = parse(sys.argv[2])
 for match in jsonpath_expression.find(json_data):
     print(f'Found value for specified key: {match.value}')
 
-# url = "http://169.254.169.254/metadata/instance?api-version=2021-02-01"
-
-#response = requests.request("GET", url)
-
-#print(response.text)
